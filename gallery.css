@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "canItalic", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 5s ease-in-out infinite;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav li {
+    list-style: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    width: 100vw;
+    height: 5vw;
+    background-color: transparent;
+    padding-left: 3rem;
+    color: #fff;
+    font-size: large;
+}
+
+.header-in {
+    height: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    width: 30%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content3 {
+    width: 50vw;
+    height: 90vh;
+    padding: 5vw;
+    margin-left: 25%;
+}
+
+.gallery-grid {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.5rem 0.5rem;
+    grid-template-areas:
+        "area1 area3 area2"
+        "area1 area4 area4"
+        "area5 area5 area6";
+}
+
+.area1 {
+    grid-area: area1;
+    background-image: url(slike/me3-harmonica.PNG);
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+.area2 {
+    grid-area: area2;
+    background-image: url(slike/bmw.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+.area3 {
+    grid-area: area3;
+    background-image: url(slike/cat.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area4 {
+    grid-area: area4;
+    background-image: url(slike/concert.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.area5 {
+    grid-area: area5;
+    background-image: url(slike/sarajevo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.area6 {
+    grid-area: area6;
+    background-image: url(slike/travnik.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .gallery-grid {
+        display: flex;
+        width: 80vw;
+        flex-direction: column;
+    }
+
+    .content3 {
+        margin-left: 30%;
+        height: 160vh;
+    }
+
+    .area1 {
+        grid-area: area1;
+        background-image: url(slike/me3-harmonica.PNG);
+        background-size: cover;
+        background-repeat: repeat-y;
+        height: 35vh;
+        width: 40vw;
+    }
+
+    .area2 {
+        grid-area: area2;
+        background-image: url(slike/bmw.jpg);
+        background-size: cover;
+        background-repeat: repeat-y;
+        height: 35vh;
+        width: 40vw;
+    }
+
+    .area3 {
+        grid-area: area3;
+        background-image: url(slike/cat.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 35vh;
+        width: 40vw;
+    }
+    .area4 {
+        grid-area: area4;
+        background-image: url(slike/concert.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 35vh;
+        width: 40vw;
+    }
+    .area5 {
+        grid-area: area5;
+        background-image: url(slike/sarajevo.jpg);
+        background-size: cover;
+        height: 35vh;
+        width: 40vw;
+    }
+    .area6 {
+        grid-area: area6;
+        background-image: url(slike/travnik.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 35vh;
+        width: 40vw;
+    }
+}
+@media screen and (max-width:768px) {
+    .hamburger-menu {
+        display: block;
+        margin-top: 5vh;
+        cursor: pointer;
+    }
+    .nav {
+        top: 6vh;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: transparent;
+        padding: 10px;
+    }
+    .nav.show {
+        display: flex;
+        justify-content: start;
+    }
+    .nav li {
+        margin: 10px 0;
+    }
+    .nav a {
+        color: white; 
+        display: block; 
+    }
+}
