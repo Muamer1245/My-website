@@ -220,6 +220,15 @@ a:hover{
     }
 }
 
+@media screen and (max-width: 450px){
+    .part2{
+        margin-top: 25vh;
+    }
+    .photo-area3{
+        margin-left: 6rem;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .part1{
         width: 85%;
