@@ -220,7 +220,7 @@ a:hover{
     }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 500px){
     .part2{
         margin-top: 25vh;
     }
